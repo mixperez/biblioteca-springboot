@@ -1,0 +1,17 @@
+# Ambiente de desarrollo: base de datos H2 en memoria
+spring:
+  datasource:
+    url: jdbc:h2:mem:biblioteca_dev
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+biblioteca:
+  seguridad:
+    # Claves solo para desarrollo, no usar en produccion
+    bibliotecario-password: dev-bibliotecario
+    socio-password: dev-socio
+    exigir-https: false

@@ -1,0 +1,25 @@
+# Ambiente de produccion: PostgreSQL y datos secretos desde variables de entorno
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      # validate: solo revisa que las tablas existan, no las modifica
+      ddl-auto: validate
+    show-sql: false
+
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: ${SSL_KEYSTORE_PATH}
+    key-store-password: ${SSL_KEYSTORE_PASSWORD}
+    key-store-type: PKCS12
+
+biblioteca:
+  seguridad:
+    bibliotecario-password: ${BIBLIOTECARIO_PASSWORD}
+    socio-password: ${SOCIO_PASSWORD}
+    exigir-https: true

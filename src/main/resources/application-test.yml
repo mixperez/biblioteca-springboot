@@ -1,0 +1,15 @@
+# Ambiente de pruebas: base de datos H2 aparte, se crea de nuevo cada vez
+spring:
+  datasource:
+    url: jdbc:h2:mem:biblioteca_test
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+biblioteca:
+  seguridad:
+    bibliotecario-password: test-bibliotecario
+    socio-password: test-socio
+    exigir-https: false

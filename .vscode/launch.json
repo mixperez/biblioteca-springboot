@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Biblioteca (dev)",
+            "request": "launch",
+            "mainClass": "cl.ipss.biblioteca.BibliotecaApplication",
+            "projectName": "biblioteca",
+            "args": "--spring.profiles.active=dev"
+        },
+        {
+            "type": "java",
+            "name": "Biblioteca (test)",
+            "request": "launch",
+            "mainClass": "cl.ipss.biblioteca.BibliotecaApplication",
+            "projectName": "biblioteca",
+            "args": "--spring.profiles.active=test"
+        }
+    ]
+}

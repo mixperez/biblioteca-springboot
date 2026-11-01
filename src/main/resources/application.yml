@@ -1,0 +1,19 @@
+# Configuracion comun a todos los ambientes.
+# El ambiente se elige con: --spring.profiles.active=dev, test o prod
+spring:
+  application:
+    name: biblioteca
+  profiles:
+    default: dev
+  jpa:
+    open-in-view: false
+
+server:
+  error:
+    include-stacktrace: never
+    include-message: never
+
+biblioteca:
+  prestamo:
+    # Dias que tiene el socio para devolver el libro
+    dias-plazo: 14
